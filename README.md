@@ -1,0 +1,2 @@
+# Mathtype-clone
+mathtype clone
