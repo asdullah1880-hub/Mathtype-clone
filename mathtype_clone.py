@@ -27,6 +27,9 @@ try:
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     from matplotlib import rcParams
+    # Set matplotlib to use a non-interactive backend
+    rcParams['text.usetex'] = False
+    rcParams['text.latex.preamble'] = r'\usepackage{amsmath,amssymb}'
     MATPLOTLIB_AVAILABLE = True
 except ImportError as e:
     MATPLOTLIB_AVAILABLE = False
@@ -34,10 +37,6 @@ except ImportError as e:
 
 import io
 import base64
-
-# Set matplotlib to use a non-interactive backend
-rcParams['text.usetex'] = False
-rcParams['text.latex.preamble'] = r'\usepackage{amsmath,amssymb}'
 
 # Common LaTeX templates for the toolbar
 TEMPLATES = {
