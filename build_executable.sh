@@ -52,6 +52,11 @@ python3 -m pyinstaller \
     --name MathTypeClone \
     --clean \
     --icon=NONE \
+    --hidden-import PyQt5.QtWidgets \
+    --hidden-import PyQt5.QtGui \
+    --hidden-import PyQt5.QtCore \
+    --hidden-import matplotlib.backends.backend_agg \
+    --hidden-import matplotlib.figure \
     mathtype_clone.py
 
 # Check if build was successful
